@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log

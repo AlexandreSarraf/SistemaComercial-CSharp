@@ -12,6 +12,22 @@ namespace SistemaComercial
     {
         private List<Produto> produtos = new List<Produto>();
 
+        private void AtualizarGrid()
+        {
+            dgvProdutos.Rows.Clear();
+
+            foreach (Produto produto in produtos)
+            {
+                dgvProdutos.Rows.Add(
+                    produto.Codigo,
+                    produto.Nome,
+                    produto.Preco.ToString("C2"),
+                    produto.Estoque,
+                    produto.Categoria
+                );
+            }
+        }
+
         public FormProdutos()
         {
             InitializeComponent();
@@ -90,6 +106,55 @@ namespace SistemaComercial
             cmbCategoria.SelectedIndex = -1;
 
             txtCodigo.Focus();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtCodigo.Text, out int codigo))
+            {
+                MessageBox.Show("Código inválido.");
+                return;
+            }
+
+            if (!decimal.TryParse(txtPreco.Text, out decimal preco))
+            {
+                MessageBox.Show("Preço inválido.");
+                return;
+            }
+
+            if (!int.TryParse(txtEstoque.Text, out int estoque))
+            {
+                MessageBox.Show("Estoque inválido.");
+                return;
+            }
+
+            Produto produto = produtos.FirstOrDefault(p => p.Codigo == codigo);
+
+            if (produto == null)
+            {
+                MessageBox.Show(
+                    "Produto não encontrado.",
+                    "Atenção",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                return;
+            }
+
+            produto.Nome = txtNome.Text;
+            produto.Preco = preco;
+            produto.Estoque = estoque;
+            produto.Categoria = cmbCategoria.Text;
+
+            AtualizarGrid();
+
+            MessageBox.Show(
+                "Produto alterado com sucesso!",
+                "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
     }
 }

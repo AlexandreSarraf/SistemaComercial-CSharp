@@ -58,7 +58,7 @@
             lblTitulo.Font = new Font("Segoe UI", 30F);
             lblTitulo.Location = new Point(0, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(984, 50);
+            lblTitulo.Size = new Size(728, 50);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "CADASTRO DE PRODUTOS";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
@@ -67,7 +67,7 @@
             // 
             lblCodigo.AutoSize = true;
             lblCodigo.Font = new Font("Segoe UI", 15F);
-            lblCodigo.Location = new Point(146, 129);
+            lblCodigo.Location = new Point(44, 88);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(81, 28);
             lblCodigo.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(233, 132);
+            txtCodigo.Location = new Point(131, 91);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(192, 23);
             txtCodigo.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 15F);
-            lblNome.Location = new Point(477, 129);
+            lblNome.Location = new Point(375, 88);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(70, 28);
             lblNome.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(569, 132);
+            txtNome.Location = new Point(467, 91);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(214, 23);
             txtNome.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             lblPreco.AutoSize = true;
             lblPreco.Font = new Font("Segoe UI", 15F);
-            lblPreco.Location = new Point(146, 196);
+            lblPreco.Location = new Point(44, 155);
             lblPreco.Name = "lblPreco";
             lblPreco.Size = new Size(65, 28);
             lblPreco.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             // txtPreco
             // 
-            txtPreco.Location = new Point(224, 199);
+            txtPreco.Location = new Point(122, 158);
             txtPreco.Name = "txtPreco";
             txtPreco.Size = new Size(201, 23);
             txtPreco.TabIndex = 6;
@@ -118,7 +118,7 @@
             // 
             lblEstoque.AutoSize = true;
             lblEstoque.Font = new Font("Segoe UI", 15F);
-            lblEstoque.Location = new Point(477, 196);
+            lblEstoque.Location = new Point(375, 155);
             lblEstoque.Name = "lblEstoque";
             lblEstoque.Size = new Size(86, 28);
             lblEstoque.TabIndex = 7;
@@ -126,7 +126,7 @@
             // 
             // txtEstoque
             // 
-            txtEstoque.Location = new Point(569, 199);
+            txtEstoque.Location = new Point(467, 158);
             txtEstoque.Name = "txtEstoque";
             txtEstoque.Size = new Size(214, 23);
             txtEstoque.TabIndex = 8;
@@ -135,7 +135,7 @@
             // 
             lblCategoria.AutoSize = true;
             lblCategoria.Font = new Font("Segoe UI", 15F);
-            lblCategoria.Location = new Point(146, 272);
+            lblCategoria.Location = new Point(44, 231);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(101, 28);
             lblCategoria.TabIndex = 0;
@@ -145,7 +145,7 @@
             // 
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Items.AddRange(new object[] { "Informática", "Periféricos", "Monitores", "Acessórios", "Móveis", "Softwares", "Outros" });
-            cmbCategoria.Location = new Point(247, 275);
+            cmbCategoria.Location = new Point(145, 234);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(178, 23);
             cmbCategoria.TabIndex = 9;
@@ -153,7 +153,7 @@
             // btnCadastrar
             // 
             btnCadastrar.Font = new Font("Segoe UI", 15F);
-            btnCadastrar.Location = new Point(199, 335);
+            btnCadastrar.Location = new Point(77, 300);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(113, 37);
             btnCadastrar.TabIndex = 10;
@@ -165,18 +165,19 @@
             // btnAlterar
             // 
             btnAlterar.Font = new Font("Segoe UI", 15F);
-            btnAlterar.Location = new Point(356, 335);
+            btnAlterar.Location = new Point(234, 300);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(113, 37);
             btnAlterar.TabIndex = 11;
             btnAlterar.Text = "Alterar";
             btnAlterar.TextAlign = ContentAlignment.TopCenter;
             btnAlterar.UseVisualStyleBackColor = true;
+            btnAlterar.Click += btnAlterar_Click;
             // 
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Segoe UI", 15F);
-            btnExcluir.Location = new Point(513, 335);
+            btnExcluir.Location = new Point(391, 300);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(113, 37);
             btnExcluir.TabIndex = 12;
@@ -187,7 +188,7 @@
             // btnLimpar
             // 
             btnLimpar.Font = new Font("Segoe UI", 15F);
-            btnLimpar.Location = new Point(670, 335);
+            btnLimpar.Location = new Point(548, 300);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.Size = new Size(113, 37);
             btnLimpar.TabIndex = 13;
@@ -202,11 +203,11 @@
             dgvProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProdutos.Columns.AddRange(new DataGridViewColumn[] { colCodigo, colNome, colPreco, colEstoque, colCategoria });
-            dgvProdutos.Location = new Point(178, 407);
+            dgvProdutos.Location = new Point(26, 407);
             dgvProdutos.MultiSelect = false;
             dgvProdutos.Name = "dgvProdutos";
             dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProdutos.Size = new Size(605, 192);
+            dgvProdutos.Size = new Size(675, 192);
             dgvProdutos.TabIndex = 14;
             // 
             // colCodigo
@@ -238,7 +239,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 611);
+            ClientSize = new Size(728, 611);
             Controls.Add(dgvProdutos);
             Controls.Add(btnLimpar);
             Controls.Add(btnExcluir);

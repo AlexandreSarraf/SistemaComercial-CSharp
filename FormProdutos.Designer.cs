@@ -206,6 +206,7 @@
             dgvProdutos.Location = new Point(26, 407);
             dgvProdutos.MultiSelect = false;
             dgvProdutos.Name = "dgvProdutos";
+            dgvProdutos.ReadOnly = true;
             dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProdutos.Size = new Size(675, 192);
             dgvProdutos.TabIndex = 14;
@@ -214,26 +215,31 @@
             // 
             colCodigo.HeaderText = "Código";
             colCodigo.Name = "colCodigo";
+            colCodigo.ReadOnly = true;
             // 
             // colNome
             // 
             colNome.HeaderText = "Nome";
             colNome.Name = "colNome";
+            colNome.ReadOnly = true;
             // 
             // colPreco
             // 
             colPreco.HeaderText = "Preço";
             colPreco.Name = "colPreco";
+            colPreco.ReadOnly = true;
             // 
             // colEstoque
             // 
             colEstoque.HeaderText = "Estoque";
             colEstoque.Name = "colEstoque";
+            colEstoque.ReadOnly = true;
             // 
             // colCategoria
             // 
             colCategoria.HeaderText = "Categoria";
             colCategoria.Name = "colCategoria";
+            colCategoria.ReadOnly = true;
             // 
             // FormProdutos
             // 

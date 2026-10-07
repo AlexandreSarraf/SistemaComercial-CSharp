@@ -36,7 +36,7 @@
             lblPreco = new Label();
             txtPreco = new TextBox();
             lblEstoque = new Label();
-            textBox1 = new TextBox();
+            txtEstoque = new TextBox();
             lblCategoria = new Label();
             cmbCategoria = new ComboBox();
             btnCadastrar = new Button();
@@ -124,12 +124,12 @@
             lblEstoque.TabIndex = 7;
             lblEstoque.Text = "Estoque:";
             // 
-            // textBox1
+            // txtEstoque
             // 
-            textBox1.Location = new Point(569, 199);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(214, 23);
-            textBox1.TabIndex = 8;
+            txtEstoque.Location = new Point(569, 199);
+            txtEstoque.Name = "txtEstoque";
+            txtEstoque.Size = new Size(214, 23);
+            txtEstoque.TabIndex = 8;
             // 
             // lblCategoria
             // 
@@ -144,7 +144,7 @@
             // cmbCategoria
             // 
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Items.AddRange(new object[] { "Informática", "Periféricos", "Monitores", "Acessórios", "Móveis", "Software", "Outros" });
+            cmbCategoria.Items.AddRange(new object[] { "Informática", "Periféricos", "Monitores", "Acessórios", "Móveis", "Softwares", "Outros" });
             cmbCategoria.Location = new Point(247, 275);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(178, 23);
@@ -160,6 +160,7 @@
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.TextAlign = ContentAlignment.TopCenter;
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // btnAlterar
             // 
@@ -193,6 +194,7 @@
             btnLimpar.Text = "Limpar";
             btnLimpar.TextAlign = ContentAlignment.TopCenter;
             btnLimpar.UseVisualStyleBackColor = true;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // dgvProdutos
             // 
@@ -244,7 +246,7 @@
             Controls.Add(btnCadastrar);
             Controls.Add(cmbCategoria);
             Controls.Add(lblCategoria);
-            Controls.Add(textBox1);
+            Controls.Add(txtEstoque);
             Controls.Add(lblEstoque);
             Controls.Add(txtPreco);
             Controls.Add(lblPreco);
@@ -271,7 +273,7 @@
         private Label lblPreco;
         private TextBox txtPreco;
         private Label lblEstoque;
-        private TextBox textBox1;
+        private TextBox txtEstoque;
         private Label lblCategoria;
         private ComboBox cmbCategoria;
         private Button btnCadastrar;

@@ -21,5 +21,12 @@ namespace SistemaComercial
                 Application.Exit();
             }
         }
+
+        private void mnuProdutosCadastrar_Click(object sender, EventArgs e)
+        {
+            FormProdutos formProdutos = new FormProdutos();
+
+            formProdutos.ShowDialog();
+        }
     }
 }

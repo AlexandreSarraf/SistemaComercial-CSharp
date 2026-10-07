@@ -30,23 +30,23 @@
         {
             menuStrip1 = new MenuStrip();
             mnuClientes = new ToolStripMenuItem();
-            mnuProdutos = new ToolStripMenuItem();
-            mnuVendas = new ToolStripMenuItem();
-            mnuRelatorios = new ToolStripMenuItem();
-            mnuUsuarios = new ToolStripMenuItem();
-            mnuSair = new ToolStripMenuItem();
             mnuClientesCadastrar = new ToolStripMenuItem();
             mnuClientesPesquisar = new ToolStripMenuItem();
+            mnuProdutos = new ToolStripMenuItem();
             mnuProdutosCadastrar = new ToolStripMenuItem();
             mnuProdutosPesquisar = new ToolStripMenuItem();
             mnuProdutosEstoque = new ToolStripMenuItem();
+            mnuVendas = new ToolStripMenuItem();
             mnuNovaVenda = new ToolStripMenuItem();
             mnuHistoricoVendas = new ToolStripMenuItem();
+            mnuRelatorios = new ToolStripMenuItem();
             mnuRelatorioVendas = new ToolStripMenuItem();
             mnuRelatorioProdutos = new ToolStripMenuItem();
             mnuRelatorioEstoque = new ToolStripMenuItem();
+            mnuUsuarios = new ToolStripMenuItem();
             mnuUsuariosCadastrar = new ToolStripMenuItem();
             mnuUsuariosPermissoes = new ToolStripMenuItem();
+            mnuSair = new ToolStripMenuItem();
             pnlPrincipal = new Panel();
             lblTitulo = new Label();
             menuStrip1.SuspendLayout();
@@ -69,6 +69,18 @@
             mnuClientes.Size = new Size(61, 20);
             mnuClientes.Text = "Clientes";
             // 
+            // mnuClientesCadastrar
+            // 
+            mnuClientesCadastrar.Name = "mnuClientesCadastrar";
+            mnuClientesCadastrar.Size = new Size(124, 22);
+            mnuClientesCadastrar.Text = "Cadastrar";
+            // 
+            // mnuClientesPesquisar
+            // 
+            mnuClientesPesquisar.Name = "mnuClientesPesquisar";
+            mnuClientesPesquisar.Size = new Size(124, 22);
+            mnuClientesPesquisar.Text = "Pesquisar";
+            // 
             // mnuProdutos
             // 
             mnuProdutos.DropDownItems.AddRange(new ToolStripItem[] { mnuProdutosCadastrar, mnuProdutosPesquisar, mnuProdutosEstoque });
@@ -76,51 +88,12 @@
             mnuProdutos.Size = new Size(67, 20);
             mnuProdutos.Text = "Produtos";
             // 
-            // mnuVendas
-            // 
-            mnuVendas.DropDownItems.AddRange(new ToolStripItem[] { mnuNovaVenda, mnuHistoricoVendas });
-            mnuVendas.Name = "mnuVendas";
-            mnuVendas.Size = new Size(56, 20);
-            mnuVendas.Text = "Vendas";
-            // 
-            // mnuRelatorios
-            // 
-            mnuRelatorios.DropDownItems.AddRange(new ToolStripItem[] { mnuRelatorioVendas, mnuRelatorioProdutos, mnuRelatorioEstoque });
-            mnuRelatorios.Name = "mnuRelatorios";
-            mnuRelatorios.Size = new Size(71, 20);
-            mnuRelatorios.Text = "Relatórios";
-            // 
-            // mnuUsuarios
-            // 
-            mnuUsuarios.DropDownItems.AddRange(new ToolStripItem[] { mnuUsuariosCadastrar, mnuUsuariosPermissoes });
-            mnuUsuarios.Name = "mnuUsuarios";
-            mnuUsuarios.Size = new Size(64, 20);
-            mnuUsuarios.Text = "Usuários";
-            // 
-            // mnuSair
-            // 
-            mnuSair.Name = "mnuSair";
-            mnuSair.Size = new Size(38, 20);
-            mnuSair.Text = "Sair";
-            mnuSair.Click += mnuSair_Click;
-            // 
-            // mnuClientesCadastrar
-            // 
-            mnuClientesCadastrar.Name = "mnuClientesCadastrar";
-            mnuClientesCadastrar.Size = new Size(180, 22);
-            mnuClientesCadastrar.Text = "Cadastrar";
-            // 
-            // mnuClientesPesquisar
-            // 
-            mnuClientesPesquisar.Name = "mnuClientesPesquisar";
-            mnuClientesPesquisar.Size = new Size(180, 22);
-            mnuClientesPesquisar.Text = "Pesquisar";
-            // 
             // mnuProdutosCadastrar
             // 
             mnuProdutosCadastrar.Name = "mnuProdutosCadastrar";
             mnuProdutosCadastrar.Size = new Size(180, 22);
             mnuProdutosCadastrar.Text = "Cadastrar";
+            mnuProdutosCadastrar.Click += mnuProdutosCadastrar_Click;
             // 
             // mnuProdutosPesquisar
             // 
@@ -134,47 +107,75 @@
             mnuProdutosEstoque.Size = new Size(180, 22);
             mnuProdutosEstoque.Text = "Estoque";
             // 
+            // mnuVendas
+            // 
+            mnuVendas.DropDownItems.AddRange(new ToolStripItem[] { mnuNovaVenda, mnuHistoricoVendas });
+            mnuVendas.Name = "mnuVendas";
+            mnuVendas.Size = new Size(56, 20);
+            mnuVendas.Text = "Vendas";
+            // 
             // mnuNovaVenda
             // 
             mnuNovaVenda.Name = "mnuNovaVenda";
-            mnuNovaVenda.Size = new Size(180, 22);
+            mnuNovaVenda.Size = new Size(137, 22);
             mnuNovaVenda.Text = "Nova Venda";
             // 
             // mnuHistoricoVendas
             // 
             mnuHistoricoVendas.Name = "mnuHistoricoVendas";
-            mnuHistoricoVendas.Size = new Size(180, 22);
+            mnuHistoricoVendas.Size = new Size(137, 22);
             mnuHistoricoVendas.Text = "Histórico";
+            // 
+            // mnuRelatorios
+            // 
+            mnuRelatorios.DropDownItems.AddRange(new ToolStripItem[] { mnuRelatorioVendas, mnuRelatorioProdutos, mnuRelatorioEstoque });
+            mnuRelatorios.Name = "mnuRelatorios";
+            mnuRelatorios.Size = new Size(71, 20);
+            mnuRelatorios.Text = "Relatórios";
             // 
             // mnuRelatorioVendas
             // 
             mnuRelatorioVendas.Name = "mnuRelatorioVendas";
-            mnuRelatorioVendas.Size = new Size(180, 22);
+            mnuRelatorioVendas.Size = new Size(122, 22);
             mnuRelatorioVendas.Text = "Vendas";
             // 
             // mnuRelatorioProdutos
             // 
             mnuRelatorioProdutos.Name = "mnuRelatorioProdutos";
-            mnuRelatorioProdutos.Size = new Size(180, 22);
+            mnuRelatorioProdutos.Size = new Size(122, 22);
             mnuRelatorioProdutos.Text = "Produtos";
             // 
             // mnuRelatorioEstoque
             // 
             mnuRelatorioEstoque.Name = "mnuRelatorioEstoque";
-            mnuRelatorioEstoque.Size = new Size(180, 22);
+            mnuRelatorioEstoque.Size = new Size(122, 22);
             mnuRelatorioEstoque.Text = "Estoque";
+            // 
+            // mnuUsuarios
+            // 
+            mnuUsuarios.DropDownItems.AddRange(new ToolStripItem[] { mnuUsuariosCadastrar, mnuUsuariosPermissoes });
+            mnuUsuarios.Name = "mnuUsuarios";
+            mnuUsuarios.Size = new Size(64, 20);
+            mnuUsuarios.Text = "Usuários";
             // 
             // mnuUsuariosCadastrar
             // 
             mnuUsuariosCadastrar.Name = "mnuUsuariosCadastrar";
-            mnuUsuariosCadastrar.Size = new Size(180, 22);
+            mnuUsuariosCadastrar.Size = new Size(133, 22);
             mnuUsuariosCadastrar.Text = "Cadastrar";
             // 
             // mnuUsuariosPermissoes
             // 
             mnuUsuariosPermissoes.Name = "mnuUsuariosPermissoes";
-            mnuUsuariosPermissoes.Size = new Size(180, 22);
+            mnuUsuariosPermissoes.Size = new Size(133, 22);
             mnuUsuariosPermissoes.Text = "Permissões";
+            // 
+            // mnuSair
+            // 
+            mnuSair.Name = "mnuSair";
+            mnuSair.Size = new Size(38, 20);
+            mnuSair.Text = "Sair";
+            mnuSair.Click += mnuSair_Click;
             // 
             // pnlPrincipal
             // 
